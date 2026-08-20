@@ -10,9 +10,25 @@ const getCart = async () => {
 };
 
 const saveCart = async (myCart) => {
-  await writeFile(myCart, JSON.stringify(myCart, null, 2));
+  await writeFile(FILE, JSON.stringify(myCart, null, 2));
 };
 
+const addToCart = async (product) => {
+  const myCart = await getCart();
+  const isFound = myCart.find((item) => item.id === product.id);
+  if (isFound) {
+    isFound.qty += product.qty;
+  } else {
+    myCart.push(product);
+  }
+  await saveCart(myCart);
+  console.log(`product added/updated with id ${product.id} into cart`);
+};
+
+const showCart = async () => {
+  const data = await getCart();
+  console.table(data);
+};
 
 const main = async () => {
   let choice;
@@ -27,10 +43,21 @@ const main = async () => {
     choice = await cin.question("Enter your choice:");
     switch (Number(choice)) {
       case 1:
-        console.log("show products");
+        await showCart();
         break;
       case 2:
-        console.log("product added");
+        let data = await cin.question("Enter id,name,price,qty:");
+        const [id, name, price, qty] = data
+          .split(",")
+          .map((item) => item.trim());
+        const product = {
+          id: Number(id),
+          name,
+          price: Number(price),
+          qty: Number(qty),
+        };
+        await addToCart(product);
+
         break;
       case 3:
         console.log("remove product");
