@@ -3,12 +3,12 @@
     "id": 101,
     "name": "Mobile",
     "price": 25000,
-    "qty": 5
+    "qty": 6
   },
   {
-    "id": 104,
-    "name": "Smart TV",
-    "price": 15000,
-    "qty": 5
+    "id": 105,
+    "name": "HP-Laptop",
+    "price": 95000,
+    "qty": 1
   }
 ]
