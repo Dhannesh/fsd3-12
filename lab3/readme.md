@@ -8,3 +8,13 @@ one of the most important module in Node.js, originally designed for building sc
 3. Build REST APIs
 4. Non-Blocking I/O
 5. Foundation of Express.js
+
+## http status codes
+
+- 200 -> OK
+- 201 -> Created
+- 400 -> Bad Request
+- 401 -> Unauthorized
+- 403 -> forbidden
+- 404 -> Not Found
+- 500 -> Internal Server Error

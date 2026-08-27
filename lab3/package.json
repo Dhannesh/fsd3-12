@@ -5,7 +5,7 @@
   "main": "prg1.js",
   "scripts": {
     "start": "node prg3.js",
-    "dev": "nodemon prg3.js"
+    "dev": "nodemon prg5.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +13,8 @@
   "type": "module",
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }
