@@ -2,7 +2,11 @@ import http from "http";
 
 const server = http.createServer((req, res) => {
   if (req.url == "/") {
-    res.end("<h1>Home Page</h1>");
+    res.write("<h1>Home Page</h1>");
+    res.end(`
+      <a href='/product'>Product Page</a>
+      <a href='/contact'>Contact Us</a>
+      `);
   } else if (req.url === "/product") {
     res.write(`
             <h1>Iphone XL</h1>
@@ -21,4 +25,4 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(3000, () => console.log("Server runs in 3000..."));
+server.listen(3000, () => console.log("prg5 runs in 3000..."));
