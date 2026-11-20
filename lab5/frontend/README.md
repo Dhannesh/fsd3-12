@@ -1,16 +1,15 @@
-# React + Vite
+# React using Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. stop the server (ctrl+c)
+2. run the server
+   > npm run dev
 
-Currently, two official plugins are available:
+# React Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. js function that must return html contents
+2. file must be saved with .jsx
+3. filename must start with capital letter
+   eg. App, Book, User, Product, ProductList
+4. component must be render as html tags
+   eg <App/> <Book/>, <User/> <Product/> <ProductList/>
+5. must be closed during rendering
